@@ -32,6 +32,10 @@ db.once("open", () => {
     });
 });
 
+app.get("/", async (req, res) => {
+    return res.send("api up").status(200);
+})
+
 app.get("/api/test", async (req, res) => {
     return res.json({ status: "Online" }).status(200);
 });
