@@ -31,3 +31,7 @@ db.once("open", () => {
         console.log(`[+] API getway is ${port}`);
     });
 });
+
+app.get("/api/test", async (req, res) => {
+    return res.json({ status: "Online" }).status(200);
+});
